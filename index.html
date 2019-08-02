@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="./jq/jquery-3.4.1.js"></script>
+  <script src='bootstrap-3.3.7-dist/js/bootstrap.js'></script>
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  .mz_box {
+    margin-bottom: 0px;
+    height: 87px;
+    /* padding: 15px; */
+    border-bottom: 2px solid #0ba1e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .mz_lis {
+    padding-top: 15px;
+  }
+  .mz_lis:hover {
+    border-bottom: 1px solid #0ba1e4;
+  }
+  /* .mz_lis::after{
+ 
+  width: 20px;
+} */
+  /* #mz_lbt {
+    margin-top: 10px;
+  } */
+.box1{
+  padding: 50px 0;
+  /* width: 1320px;
+  height: 434px; */
+  /* display: block; */
+}
+  .box1 h1 {
+    font-family: inherit;
+  }
+
+  .line {
+    border-bottom: 2px solid #0ba1e4;
+    width: 100px;
+    margin: 30px auto;
+  }
+
+  .ps {
+    font-family: inherit;
+    font-size: 18px;
+    color: #777;
+  }
+
+  .number{
+    font-size: 70px;
+    line-height: 1.5em;
+    color: #0ba1e4;
+  }
+
+  .title{
+    color: #919191;
+  }
+
+  .mz_wmdys h2 {
+    font-family: inherit;
+  }
+
+  .iine-big {
+    border-bottom: 2px solid #0ba1e4;
+    width: 100px;
+    margin: 30px auto;
+  }
+
+  .ps1 {
+    font-family: inherit;
+    font-size: 18px;
+    color: #777;
+  }
+
+  .mz_sztp {
+    color: #0ba1e4;
+    font-size: 80px;
+    line-height: 1.5em;
+  }
+
+
+  .mz_box2 {
+    background-color: #f5f5f5;
+    display: block;
+  }
+  .mz_box4{
+   background-color: #f5f5f5;
+    display: block;
+    margin-top: 70px;
+  }
+  .mz_box5{
+   
+  }
+  .row {
+    padding: 30px 0;
+  }
+  .thumbnail{
+    text-align: center;
+  }
+  .mz_h3{
+    /* font-size: 24px; */
+    /* font-family: inherit; */
+  }
+  .mz_h3 p{
+    margin: 0 0 10px;
+    color: #0ba1e4;
+  }
+
+  /* div{
+  display: block;
+} */
+.thumbnail:hover{
+  background: #0ba1e4;
+  transition: 1s;
+}
+.thumbnail:hover .mz_sztp{
+  color: white;
+}
+.thumbnail:hover .mz_h3{
+  color: white;
+}
+.thumbnail:hover p{
+  color: white;
+}
+
+
+  .card-box {
+      padding-top: 20px;
+      padding-bottom: 60px;
+    }
+  .card-area .card-item {
+      float: left;
+      position: relative;
+      list-style: none;
+      width: 25%;
+      background-color: #fafafa;
+      border: 1px solid #c1c1c1;
+      transition:1s;
+    }
+  .card-area .card-active {
+    /* 设置第一个框蓝色选中的代码如果要设置变蓝在li中加card-active */
+      background-color: #0ba1e4;
+      border: 1px solid #0ba1e4;
+      box-shadow: 0 0 20px 0 rgba(45,183,245,.5);
+      color: #fff;
+      z-index: 11;
+      /* transition: 1s; */
+      transform: scale(1.1);
+  }
+    /* .card-item .card-title{
+      background-color: #0ba1e4;
+    } */
+    .card-area .card-item .card-title {
+        padding: 20px 0px;
+        border-bottom: 1px solid #c1c1c1;
+        
+    }
+    .card-area .card-item .card-title h4 {
+        font-weight: bold;
+        color: #0ba1e4;
+    }
+    .card-area .card-active .card-title h4 {
+        color: #fff;
+    }
+    .card-area .card-item .card-content {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        
+    }
+    .card-area .card-item .card-content p {
+        line-height: 3em;
+    }
+    .btn-outline-blue {
+      /* 查看详情按钮为白色如果要设置为白色要在下面按钮标签里加blue*/
+        color: #fff;
+        background: transparent;
+        border-color: #fff;
+        /* transition: 1s; */
+    } 
+    .btn-outline-inverse {
+      /* 设置查看按钮和字体为蓝色 */
+        color: #0ba1e4;
+        background: transparent;
+        /* background: tomato; */
+        border-color: #0ba1e4;
+    }
+    .btn-wzbkbs{
+      /* 移入btn-outline-inverse的时候给它添加让看看按钮和字体变成白色 */
+      color: white;
+      border: 1px solid white;
+      /* transition: 1s; */
+    }
+    .ckgdfw .btn-lg{
+      border: 1px solid #0ba1e4;
+      position: relative;
+      top: 60px;
+    }
+    .mz_slt{
+      border: 1px solid green;
+      padding: 34px 26px;
+      border-radius: 5px;
+      position: relative;
+      margin-top: 75px;
+    }
+    .glly-icon{
+      width: 70px;
+      height: 70px;
+      background: url('./img/yhgl-icon.svg');
+      margin: 10px auto;
+      position: relative;
+      top: 25px;
+    }
+    .arrow{
+      /* 下面代码是设置下标三角型的 */
+      width: 20px;
+      height: 20px;
+      border: 1px solid green;
+      transform: rotate(45deg);
+      background: #f5f5f5;
+      position: relative;
+      top: -10px;
+      margin: 0 auto;
+      border-top: 0px solid;
+      border-left: 0px solid;
+    }
+    .ptp{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      margin-left: -25px;
+
+    }
+    .mz_zxzxl{
+      margin-top: 100px;
+    }
+    .mz_xtp{
+      width: 140px;
+      height: 110px;
+      background: #fff;
+      border: 1px solid #dddddd;
+    }
+    .our-news-item img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .media-body{
+      /* width: 305px;
+      height: 112px; */
+      overflow: hidden;
+    }
+    .our-news-item h4{
+    color: #0ba1e4;
+    height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .our-news-item p{
+      font-size: 12px;
+      color: #919191;
+      height: 3em;
+      overflow: hidden;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    .dynamic-li{
+      color: #999;
+      padding: 2px 0;
+      font-size: 12px;
+    }
+    .our-news-more{
+      text-align: center;
+    }
+    .mz_box6{
+      margin-top: 50px;
+    }
+    .our-client{
+      background: #e1e1e1;
+    }
+    /* .index-row{
+      padding: 50px 0;
+      padding-top: 50px;
+      padding-right: 0px;
+      padding-bottom: 50px;
+      padding-left: 0px;
+    } */
+    .our-client-item .our-client-logo{
+      text-align: center;
+      border: 1px solid #c1c1c1;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+    .our-client-logo:hover{
+      border: 1px solid cadetblue;
+    }
+    .mz_box7{
+      background:#44a7f3;
+    }
+    .mz_mfzx{
+      color: white;
+      border: 1px solid white;
+      font-size: 24px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 20px;
+      position: relative;
+      left: 43%;
+    }
+    .xbk{
+      color: white;
+    }
+    .mz_p{
+      color: white;
+      font-size: 18px;
+    }
+    .mz_phx{
+      border-bottom: 2px solid white;
+      width: 370px;
+      margin: 30px auto;
+    }
+
+    /* .top{
+				position: fixed;
+				right: 10px;
+				bottom: 100px;
+				border: 1px solid #0ba1e4;
+        background-color: #f5f5f5;
+        z-index: 11;
+			}
+			.top span{
+				font-size: 30px;
+				color: #0ba1e4;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+        z-index: 11;
+			} */
+
+      #clan-slider{
+        position: fixed;
+        right: -30px;
+        bottom:30%;
+        z-index: 12;
+      }
+      #clan-slider ul li{
+        display: block;
+        margin:0;
+        padding:0;
+        margin-top:2px;
+        
+      }
+      #clan-slider ul li a{
+        display: block;
+        overflow: hidden;
+        width:48px;
+        height: 48px;
+        border: 1px solid #0ba1e4;
+        background-color: #f5f5f5;
+      }
+      #slider-qq{
+        background:url('./img/clan-slider.png')no-repeat 0 -136px;
+      }
+      #slider-chat{
+        background:url('./img/clan-slider.png')no-repeat 0 -93px;
+      }
+     #slider-phone{
+        background:url('./img/clan-slider.png')no-repeat 0 -183px;
+     } 
+     #slider-wechat{
+        background:url('./img/clan-slider.png')no-repeat 0 -231px;
+     }
+     #slider-goTop{
+       background:url('./img/clan-slider.png')no-repeat 0 0px;
+     }
+</style>
+<script>
+  $(function(){
+    $('.card-item').each(function(){
+    $(this).mouseover(function(){
+      $(this).addClass('card-active');
+      $(this).siblings().removeClass('card-active');
+      $(this).find(".btn").addClass('btn-wzbkbs').removeClass('btn-outline-blue');
+      $(this).siblings().find(".btn").addClass('btn-outline-blue').removeClass('btn-wzbkbs');
+    });
+  });
+  })
+  
+</script>
+<body>
+ 
+  <nav class="navbar navbar-default mz_box navbar-fixed-top">
+    <!-- <div class="container"> -->
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" class="img-responsive" alt="Responsive image">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="mz_lis"><a href="#" style="font-size:16px" >首页</a></li>
+          <li class="mz_lis"><a href="#" style="font-size:16px">签证指南</a></li>
+          <li class="mz_lis"><a href="#" style="font-size:16px">签证加急</a></li>
+          <li class="mz_lis"><a href="#" style="font-size:16px">签证服务</a></li>
+          <li class="mz_lis"><a href="#" style="font-size:16px">签证资讯</a></li>
+          <li class="mz_lis"><a href="#" style="font-size:16px">资料下载</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+    </div>
+  </nav>
+
+  <!-- <div class="top">
+			<span class="glyphicon glyphicon-arrow-up"></span>
+    </div> -->
+    
+    <!-- 下面是侧边栏 -->
+
+    <div id="clan-slider">
+        <ul>
+            <li class="hidden-xs">
+                <a id="slider-chat" class="web-chat" href=""></a>
+                <div class="clan-slider-tips">
+                    在线咨询
+                </div>
+            </li>
+            <li class="hidden-xs">
+                <a target="_blank" href="" id="slider-qq"></a>
+                <div class="clan-slider-tips">
+                    QQ咨询
+                </div>
+            </li>
+            <li class="hidden-xs">
+                <a id="slider-phone" href=""></a>
+                <div class="clan-slider-tips">
+                    010-64648731
+                </div>
+            </li>
+            <li class="hidden-xs">
+                <a id="slider-wechat" href=""></a>
+                <div class="clan-slider-tips-wechat">
+                   微信
+                </div>
+            </li>
+            <li class="hidden-xs">
+              <a id="slider-goTop"></a>
+              回到顶部</li>
+            <!-- <li><a id="slider-goTop glyphicon glyphicon-arrow-up" href="" style="display: block;"></a>
+            回到顶部</li> -->
+        </ul>
+    </div>
+
+  <!-- 下面是轮播图 -->
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="./img/banner1.jpg" alt="">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+      <div class="item">
+        <img src="./img/banner2.jpg" alt="">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="rom box1">
+    <div class="container">
+      <div class="col-sm-12 main-title">
+      <h1 class="text-center"><strong>我们的成绩</strong></h1>
+      <p class="iine-big"></p>
+    <p class="text-center ps"><strong>2018年1月1日至2018年12月30日，我们的接待数据。</strong></p>
+      </div>
+      <div class="clo-xs-7 col-sm-5 col-md-3 col-lg-3">
+        <div class="number text-center">18,397</div>
+        <h4 class="title text-center">累计受理申请</h4>
+      </div>
+
+      <div class="clo-xs-7  col-sm-5 col-md-3 col-lg-3">
+          <div class="number text-center">98.8%</div>
+          <h4 class="title text-center">综合通过率</h4>
+        </div>
+
+        <div class="clo-xs-7 col-sm-5 col-md-3 col-lg-3">
+            <div class="number text-center">3,273</div>
+            <h4 class="title text-center">加急申请人数</h4>
+          </div>
+
+          <div class="clo-xs-7 col-sm-5 col-md-3 col-lg-3">
+              <div class="number text-center">100%</div>
+              <h4 class="title text-center">加急成功率</h4>
+            </div>
+
+      </div>
+    </div>
+  </div>
+    <div class="mz_box2">
+    <div class="container">
+      <div class="col-sm-12 main-title mz_wmdys">
+        <h2 class="h1 text-center"><strong>我们的优势</strong></h2>
+        <p class="iine-big"></p>
+        <p class="text-center ps1"><strong>每一份签证申请都是独立个案，每一位申请人都应该被认真对待。</strong></p>
+      </div>
+      <!-- 下面是显示优势的缩略图代码 -->
+
+     <div class="row">
+        <div class="col-sm-6 col-md-3 col-lg-3">
+          <div class="thumbnail">
+            <span class="glyphicon glyphicon-time mz_sztp text-center" aria-hidden="true"></span>
+            <div class="caption">
+              <h3 class="mz_h3">十一年美签经验</h3>
+              <p>2006年开始办理美国签证至今，积累了丰富的首签和拒签再签实用经验。</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-sm-6 col-md-3 col-lg-3">
+          <div class="thumbnail">
+          <span style="font-size: 80px;" class="glyphicon glyphicon-screenshot mz_sztp" aria-hidden="true"></span>
+            
+     
+            <div class="caption">
+              <h3 class="mz_h3">一对一精准定制</h3>
+              <p>每一位申请人都是独立的签证个案，我们从签证原理开始为您定制方案。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-3">
+          <div class="thumbnail">
+            <span style="font-size: 80px;" class="glyphicon glyphicon-refresh mz_sztp" aria-hidden="true"></span>
+         
+            <div class="caption">
+              <h3 class="mz_h3">高效率即时响应</h3>
+              <p>遇到任何疑问，您都会在第一时间得到我们的正面回应并进行相关处理。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-3 ">
+            <div class="thumbnail">
+                <span style="font-size: 80px;" class="glyphicon glyphicon-thumbs-up mz_sztp" aria-hidden="true"></span>
+      
+              <div class="caption">
+                <h3 class="mz_h3">精益求精的态度</h3>
+                <p>死磕完美材料，对签证申请流程中的细节一丝不苟，力争最高通过率。</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+      <div class="mz_box3">
+        <div class="container">
+            <div class="col-sm-12 main-title">
+                <h2 class="h1 text-center"><strong>我们的服务</strong></h2>
+                <p class="line line-big"></p>
+                <h2>
+                <p class="text-center ps1"><strong>与美国非移民签证申请相关的所有服务，我们都提供支持。</strong></p>
+                </h2>
+            </div>
+            <!-- 下面是底部的 -->
+            <div class="col-xs-12 text-center card-box">
+                <ul class="card-area">
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>美国加急预约</h4>
+
+                            <p>全程加急办理</p>
+
+                        </div>
+                        <div class="card-content">
+                            <p>3个工作日内进馆</p>
+
+                            <p>先加急 后付费</p>
+
+                            <p>100%加急成功</p>
+
+                            <p>支持全国五大领区</p>
+
+                            <p>支持所有签证类型</p>
+                            <a href="#" class="btn btn-outline-inverse ">查看详情</a>
+
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>美国商务签证</h4>
+
+                            <p>B1/B2商务</p>
+                        </div>
+                        <div class="card-content">
+                            <p>10年多次往返</p>
+
+                            <p>一对一方案定制</p>
+
+                            <p>申请材料指导</p>
+
+                            <p>面签培训</p>
+
+                            <p>全程解答所有疑问</p>
+                            <a class="btn btn-outline-inverse ">查看详情</a>
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>美国免面签</h4>
+
+                            <p>免面试中信代传递</p>
+                        </div>
+                        <div class="card-content">
+                            <p>简单申请材料</p>
+
+                            <p>无须进馆面试</p>
+
+                            <p>B1/B2十年有效</p>
+
+                            <p>可加急申请</p>
+
+                            <p>全流程服务</p>
+                            <a href="" class="btn btn-outline-inverse ">查看详情</a>
+                        </div>
+                    </li>
+                    <li class="card-item">
+                        <div class="card-title">
+                            <h4>美国留学签证</h4>
+
+                            <p>F1/F2留学陪读</p>
+                        </div>
+                        <div class="card-content">
+                            <p>签证方案咨询</p>
+
+                            <p>申请材料指导</p>
+
+                            <p>代缴SEVIS费</p>
+
+                            <p>面签培训</p>
+
+                            <p>可加急办理</p>
+                            <a href="" class="btn btn-outline-inverse ">查看详情</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="ckgdfw"><a class="btn-lg">查看更多服务</a></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="mz_box4">
+          <div class="container">
+            <div class="row"></div>
+            <div class="col-sm-12 main-title mz_khdgl">
+              <h2 class="h1 text-center"><strong>客户的鼓励</strong></h2>
+              <p class="iine-big"></p>
+              <p class="text-center ps1"><strong>帮助您解决实际问题，顺利、及时地获得签证，是我们存在的根本价值。</strong></p>
+            </div>
+            
+
+            <div class="row ">
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class=" mz_slt">
+                    <div class="caption">
+                      <img src="./img/pingjia1.jpg" class="ptp">
+                      <p>护照丢了，定了春节行程。11号补好护照约了13号面签，这速度简直惊人，所有的旅行社都说弄不了，来不及了，肯定没戏。多亏了你们，非常感谢！</p>
+                    </div>
+                  </div>
+                  <div class="arrow"></div>
+                  <figure class="glly-icon ac-figure-icon"></figure>
+                </div>
+
+                <div class="row ">
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                      <div class=" mz_slt">
+                        <div class="caption">
+                          <img src="./img/pingjia2.jpg" class="ptp">
+                          <p>因为我情况很特殊也很难办，白本加多次拒签。感谢你们为我做详细的分析与方案，这次签证终于过了！本来都做好心理准备再拒我就彻底放弃的。谢谢你们！</p>
+                        </div>
+                      </div>
+                      <div class="arrow"></div>
+                    <figure class="glly-icon ac-figure-icon"></figure>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                          <div class=" mz_slt">
+                            <div class="caption">
+                              <img src="./img/pingjia3.jpg" class="ptp">
+                              <p>同学推荐过来的,哎呦我滴妈呀马上就要开学了，加上去年成绩不并理想。多亏你们帮我插队面签，分析面签问题，非常专业。现在签证已经拿到了，我会再介绍同学来。</p>
+                            </div>
+                          </div>
+                          <div class="arrow"></div>
+                    <figure class="glly-icon ac-figure-icon"></figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mz_box5">
+                  <div class="container">
+                    <div class="col-sm-12 main-title mz_zxzxl">
+                      <h2 class="h1 text-center"><strong>美国签证最新资讯</strong></h2>
+                      <p class="iine-big"></p>
+                      <p class="text-center ps1"><strong>中岚签证帮您关注最新美国签证相关政策与新闻。</strong></p>
+                    </div>
+
+                              
+
+                    <div class="col-sm-6">
+                        <div class="media our-news-item">
+                            <div class="media-left">
+                                <a class="thumbnail mz_xtp" href="">
+                                    <img class="media-object" src="./img/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <a href=""><h4 class="media-heading">92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿</h4></a>
+                                <div class="dynamic-li">
+                                    <span>时间：2017-05-09 </span>
+                                </div>
+                                <p>他们大部分来自东北，在去年10月份时，其所在城市的劳务中介公司找到他们，介绍了塞班岛的工作，中介给他们...</p>
+                                <div class="dynamic-li">
+                                    <a href="">[详细]</a>
+                                    <span>作者：中岚签证 <span class="hidden-xs">clantrip.com</span> </span>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="media our-news-item">
+                                <div class="media-left">
+                                    <a class="thumbnail mz_xtp" href="">
+                                        <img class="media-object" src="./img/20170508061916221.png" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href=""><h4 class="media-heading">2017年赴美签证新规定</h4></a>
+                                    <div class="dynamic-li">
+                                        <span>时间：2017-05-08 </span>
+                                    </div>
+                                    <p>美国国务院领事事务局2016年10月6日公告，自2016年11月1日开始，申请美国护照或签证，要使用没有戴眼镜的...</p>
+                                    <div class="dynamic-li">
+                                        <a href="">[详细]</a>
+                                        <span>作者：中岚签证 <span class="hidden-xs">clantrip.com</span> </span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                              <div class="col-sm-6">
+                                  <div class="media our-news-item">
+                                      <div class="media-left">
+                                          <a class="thumbnail mz_xtp" href="">
+                                              <img class="media-object" src="./img/20170508052848613.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
+                                          </a>
+                                      </div>
+                                      <div class="media-body">
+                                          <a href=""><h4 class="media-heading">92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿</h4></a>
+                                          <div class="dynamic-li">
+                                              <span>时间：2017-05-09 </span>
+                                          </div>
+                                          <p>他们大部分来自东北，在去年10月份时，其所在城市的劳务中介公司找到他们，介绍了塞班岛的工作，中介给他们开出每天工作8小时日薪300元、如果加班每小时50元的待遇。民工称他们当时也没</p>
+                                          <div class="dynamic-li">
+                                              <a href="">[详细]</a>
+                                              <span>作者：中岚签证 <span class="hidden-xs">clantrip.com</span> </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="col-sm-6">
+                                  <div class="media our-news-item">
+                                      <div class="media-left">
+                                          <a class="thumbnail mz_xtp" href="">
+                                              <img class="media-object" src="./img/20170414112021996.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
+                                          </a>
+                                      </div>
+                                      <div class="media-body">
+                                          <a href=""><h4 class="media-heading">92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿</h4></a>
+                                          <div class="dynamic-li">
+                                              <span>时间：2017-05-09 </span>
+                                          </div>
+                                          <p>他们大部分来自东北，在去年10月份时，其所在城市的劳务中介公司找到他们，介绍了塞班岛的工作，中介给他们开出每天工作8小时日薪300元、如果加班每小时50元的待遇。民工称他们当时也没</p>
+                                          <div class="dynamic-li">
+                                              <a href="">[详细]</a>
+                                              <span>作者：中岚签证 <span class="hidden-xs">clantrip.com</span> </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="col-sm-12 our-news-more">
+                                  <h2>
+                                      <small><a href="">更多资讯&gt;&gt;&gt;</a></small>
+                                  </h2>
+                              </div>
+
+                              </div>
+                              </div>
+
+                              <!-- 下面是我们的客户代码 -->
+                              <div class="mz_box6">
+                            <div class="index-row our-client">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-12 main-title">
+                                        <h2 class="h1 text-center">我们的客户</h2>
+                        
+                                        <p class="line line-big"></p>
+                                        <p class="text-center ps1"><strong>他们与中岚建立了合作关系</strong></p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client1.png" alt="中国重汽">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client2.png" alt="中国中冶">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client3.png" alt="宝钢集团">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client4.png" alt="中国水电">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client5.png" alt="河北建工">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client6.png" alt="格力集团">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client7.png" alt="山东山推">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client8.png" alt="福田汽车">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client9.png" alt="联想集团">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client10.png" alt="冀中能源">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client11.png" alt="腾讯集团">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3 col-md-2 our-client-item">
+                                        <div class="our-client-logo">
+                                            <img class="img-responsive center-block" src="./img/client12.png" alt="中国石油">
+                                        </div>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="mz_box7">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 contact-banner-box">
+                                        <h2 class="h1 xbk text-center">更多疑问 全面解答</h2>
+                                        <p class="iine-big mz_phx"></p>
+                                        <p class="text-center mz_p"><strong>资深美签专家在线为您解答所有疑惑</strong></p>
+                                        <!-- <h4 class="mz_h4">资深美签专家在线为您解答所有疑惑</h4> -->
+                                        <a href="" class="btn btn-outline-inverse btn-lg web-chat mz_mfzx">免费咨询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                              
+
+</body>
+
+</html>
