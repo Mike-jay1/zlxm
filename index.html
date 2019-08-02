@@ -145,10 +145,8 @@
       padding-bottom: 60px;
     }
   .card-area .card-item {
-      float: left;
       position: relative;
       list-style: none;
-      width: 25%;
       background-color: #fafafa;
       border: 1px solid #c1c1c1;
       transition:1s;
@@ -322,8 +320,8 @@
       padding-left: 30px;
       padding-right: 30px;
       margin-top: 20px;
-      position: relative;
-      left: 43%;
+      /* position: relative;
+      left: 43%; */
     }
     .xbk{
       color: white;
@@ -392,6 +390,9 @@
      }
      #slider-goTop{
        background:url('./img/clan-slider.png')no-repeat 0 0px;
+     }
+     .mz_lbt{
+       margin-top: 87px;
      }
 </style>
 <script>
@@ -483,7 +484,7 @@
     </div>
 
   <!-- 下面是轮播图 -->
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div id="carousel-example-generic" class="carousel slide mz_lbt" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -604,9 +605,9 @@
       </div>
     </div>
 
-      <div class="mz_box3">
+      <div class="mz_box3 row">
         <div class="container">
-            <div class="col-sm-12 main-title">
+            <div class="main-title">
                 <h2 class="h1 text-center"><strong>我们的服务</strong></h2>
                 <p class="line line-big"></p>
                 <h2>
@@ -614,9 +615,9 @@
                 </h2>
             </div>
             <!-- 下面是底部的 -->
-            <div class="col-xs-12 text-center card-box">
+            <div class="text-center card-box">
                 <ul class="card-area">
-                    <li class="card-item">
+                    <li class="card-item col-xs-12 col-md-3">
                         <div class="card-title">
                             <h4>美国加急预约</h4>
 
@@ -637,7 +638,7 @@
 
                         </div>
                     </li>
-                    <li class="card-item">
+                    <li class="card-item col-xs-12 col-md-3">
                         <div class="card-title">
                             <h4>美国商务签证</h4>
 
@@ -656,7 +657,7 @@
                             <a class="btn btn-outline-inverse ">查看详情</a>
                         </div>
                     </li>
-                    <li class="card-item">
+                    <li class="card-item col-xs-12 col-md-3">
                         <div class="card-title">
                             <h4>美国免面签</h4>
 
@@ -675,7 +676,7 @@
                             <a href="" class="btn btn-outline-inverse ">查看详情</a>
                         </div>
                     </li>
-                    <li class="card-item">
+                    <li class="card-item col-xs-12 col-md-3">
                         <div class="card-title">
                             <h4>美国留学签证</h4>
 
@@ -943,7 +944,7 @@
                                         <p class="iine-big mz_phx"></p>
                                         <p class="text-center mz_p"><strong>资深美签专家在线为您解答所有疑惑</strong></p>
                                         <!-- <h4 class="mz_h4">资深美签专家在线为您解答所有疑惑</h4> -->
-                                        <a href="" class="btn btn-outline-inverse btn-lg web-chat mz_mfzx">免费咨询</a>
+                                        <p class="text-center"><a href="" class="btn btn-outline-inverse btn-lg web-chat mz_mfzx">免费咨询</a></p>
                                     </div>
                                 </div>
                             </div>
